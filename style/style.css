@@ -10,11 +10,7 @@
     100% 100%;
   background-repeat: repeat, no-repeat;
 }
-.banner-glow {
-  box-shadow: 0 10px 30px -10px rgba(227, 24, 55, 0.3);
-}
 
-/* Reset básico */
 * {
   margin: 0;
   padding: 0;
@@ -30,9 +26,7 @@ header {
   width: 100%;
 }
 
-/* ==========================================
-   1. ESTILOS TOP BAR (Base / Escritorio)
-   ========================================== */
+/* 1. ESTILOS TOP BAR */
 .top-bar {
   background-color: #0d223a;
   display: flex;
@@ -61,9 +55,7 @@ header {
   text-align: center;
 }
 
-/* ==========================================
-   2. ESTILOS NAVBAR (Base / Escritorio)
-   ========================================== */
+/* 2. ESTILOS NAVBAR */
 .main-navbar {
   background-color: #ffffff;
   width: 100%;
@@ -82,7 +74,7 @@ header {
 
 .logo-link {
   text-decoration: none;
-  flex-shrink: 0; /* Evita que el logo se encoja */
+  flex-shrink: 0;
 }
 
 .logo-badge {
@@ -108,7 +100,7 @@ header {
   display: flex;
   list-style: none;
   gap: 20px;
-  flex-wrap: wrap; /* Si el texto no cabe, se ajusta responsivamente */
+  flex-wrap: wrap;
   justify-content: center;
 }
 
@@ -139,14 +131,12 @@ header {
   display: block;
 }
 
-/* ==========================================
-   3. RESPONSIVE DESIGN (Media Queries)
-   ========================================== */
+/* 3. RESPONSIVE DESIGN */
 
 /* Tablets / Dispositivos medianos (máximo 768px) */
 @media (max-width: 768px) {
   .top-bar {
-    flex-direction: column; /* Apila el botón y el texto en vertical */
+    flex-direction: column;
     gap: 6px;
     padding: 10px;
   }
@@ -161,7 +151,7 @@ header {
   }
 
   .nav-links {
-    gap: 12px; /* Reduce la distancia entre opciones */
+    gap: 12px;
   }
 
   .nav-links a {
@@ -179,4 +169,8 @@ header {
   .nav-links {
     display: none;
   }
+}
+
+.icon-tienda {
+  color: #e31837;
 }
