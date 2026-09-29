@@ -1,0 +1,182 @@
+/* body */
+.gradient-siman {
+  margin: 0;
+  min-height: 100vh;
+  background:
+    radial-gradient(rgba(200, 192, 192, 0.339) 1px, transparent 1px),
+    linear-gradient(160deg, #0b2341 0%, #1b3b6f 70%, #e31837 100%);
+  background-size:
+    18px 18px,
+    100% 100%;
+  background-repeat: repeat, no-repeat;
+}
+.banner-glow {
+  box-shadow: 0 10px 30px -10px rgba(227, 24, 55, 0.3);
+}
+
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family:
+    "Segoe UI",
+    system-ui,
+    -apple-system,
+    sans-serif;
+}
+
+header {
+  width: 100%;
+}
+
+/* ==========================================
+   1. ESTILOS TOP BAR (Base / Escritorio)
+   ========================================== */
+.top-bar {
+  background-color: #0d223a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  padding: 8px 16px;
+  width: 100%;
+}
+
+.top-bar-badge {
+  background-color: #e61c38;
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 13px;
+  padding: 6px 14px;
+  border-radius: 6px;
+  letter-spacing: 0.5px;
+  white-space: nowrap;
+}
+
+.top-bar-text {
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 400;
+  text-align: center;
+}
+
+/* ==========================================
+   2. ESTILOS NAVBAR (Base / Escritorio)
+   ========================================== */
+.main-navbar {
+  background-color: #ffffff;
+  width: 100%;
+  padding: 12px 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.navbar-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.logo-link {
+  text-decoration: none;
+  flex-shrink: 0; /* Evita que el logo se encoja */
+}
+
+.logo-badge {
+  background-color: #e61c38;
+  color: #ffffff;
+  font-weight: 900;
+  font-size: 20px;
+  padding: 6px 14px;
+  border-radius: 8px;
+  display: inline-flex;
+  align-items: baseline;
+}
+
+.logo-country {
+  font-size: 11px;
+  font-weight: bold;
+  vertical-align: super;
+  margin-left: 1px;
+}
+
+/* Lista de navegación */
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 20px;
+  flex-wrap: wrap; /* Si el texto no cabe, se ajusta responsivamente */
+  justify-content: center;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #0d223a;
+  font-size: 15px;
+  font-weight: 600;
+  transition: color 0.2s ease;
+  white-space: nowrap;
+}
+
+.nav-links a:hover {
+  color: #e61c38;
+}
+
+.navbar-right {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.status-dot {
+  width: 12px;
+  height: 12px;
+  background-color: #e2e8f0;
+  border-radius: 50%;
+  display: block;
+}
+
+/* ==========================================
+   3. RESPONSIVE DESIGN (Media Queries)
+   ========================================== */
+
+/* Tablets / Dispositivos medianos (máximo 768px) */
+@media (max-width: 768px) {
+  .top-bar {
+    flex-direction: column; /* Apila el botón y el texto en vertical */
+    gap: 6px;
+    padding: 10px;
+  }
+
+  .top-bar-badge {
+    font-size: 11px;
+    padding: 4px 10px;
+  }
+
+  .top-bar-text {
+    font-size: 12px;
+  }
+
+  .nav-links {
+    gap: 12px; /* Reduce la distancia entre opciones */
+  }
+
+  .nav-links a {
+    font-size: 13px;
+  }
+}
+
+/* Móviles (máximo 500px) */
+@media (max-width: 500px) {
+  .navbar-container {
+    justify-content: space-between;
+  }
+
+  /* En celulares muy pequeños se suele ocultar el menú de texto para evitar amontonamiento */
+  .nav-links {
+    display: none;
+  }
+}
