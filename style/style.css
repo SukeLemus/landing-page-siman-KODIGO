@@ -141,12 +141,20 @@ body {
   align-items: center;
 }
 
-.status-dot {
-  width: 12px;
-  height: 12px;
-  display: block;
-  background-color: #e2e8f0;
-  border-radius: 50%;
+.registro-btn {
+  display: inline-block;
+  padding: 9px 18px;
+  background-color: var(--siman-rojo);
+  color: var(--blanco);
+  border-radius: 6px;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 700;
+  transition: 0.3s ease;
+}
+
+.registro-btn:hover {
+  background-color: var(--siman-azul);
 }
 
 /* Slider */
@@ -428,6 +436,393 @@ body {
 
 .producto-btn:hover {
   background-color: var(--siman-azul);
+}
+
+/* Sección de moda */
+
+.moda {
+  padding: clamp(45px, 6vw, 75px) 5%;
+  background-color: var(--gris-fondo);
+}
+
+.moda-header {
+  width: min(900px, 100%);
+  margin: 0 auto 40px;
+  text-align: center;
+}
+
+.moda-header span {
+  color: var(--siman-rojo);
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.moda-header h2 {
+  margin: 8px 0;
+  color: var(--siman-azul);
+  font-size: clamp(28px, 4vw, 38px);
+}
+
+.moda-header p {
+  color: var(--gris-texto);
+  font-size: 16px;
+}
+
+.moda-grid {
+  width: min(1250px, 100%);
+  margin: auto;
+  display: grid;
+  grid-template-columns: 1.2fr 1fr 1fr 1.2fr;
+  grid-template-rows: 280px 280px;
+  gap: 18px;
+}
+
+.moda-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 12px;
+  background-color: #ddd;
+  box-shadow: 0 5px 18px rgba(0, 0, 0, 0.1);
+}
+
+.moda-card img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.moda-card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, transparent 35%, rgba(0, 0, 0, 0.7) 100%);
+}
+
+.moda-card:hover img {
+  transform: scale(1.06);
+}
+
+.moda-mujer {
+  grid-column: 1;
+  grid-row: 1 / 3;
+}
+
+.moda-hombre {
+  grid-column: 4;
+  grid-row: 1 / 3;
+}
+
+.moda-accesorios {
+  grid-column: 2;
+  grid-row: 1;
+}
+
+.moda-relojes {
+  grid-column: 3;
+  grid-row: 1;
+}
+
+.moda-ninos {
+  grid-column: 2;
+  grid-row: 2;
+}
+
+.moda-fresco {
+  grid-column: 3;
+  grid-row: 2;
+}
+
+.moda-overlay {
+  position: absolute;
+  z-index: 2;
+  right: 20px;
+  bottom: 20px;
+  left: 20px;
+  color: var(--blanco);
+}
+
+.moda-overlay span {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+}
+
+.moda-overlay h3 {
+  margin: 4px 0 10px;
+  font-size: 22px;
+}
+
+.moda-overlay a {
+  display: inline-block;
+  padding: 8px 15px;
+  background-color: var(--blanco);
+  color: var(--siman-azul);
+  border-radius: 5px;
+  text-decoration: none;
+  font-size: 12px;
+  font-weight: 700;
+  transition: 0.3s ease;
+}
+
+.moda-overlay a:hover {
+  background-color: var(--siman-rojo);
+  color: var(--blanco);
+}
+
+/* Formulario de registro */
+
+.registro {
+  width: 100%;
+  padding: clamp(45px, 7vw, 80px) 5%;
+  background-color: var(--gris-fondo);
+}
+
+.registro-container {
+  width: min(1000px, 100%);
+  margin: auto;
+}
+
+.registro-header {
+  max-width: 700px;
+  margin: 0 auto 35px;
+  text-align: center;
+}
+
+.registro-header span {
+  color: var(--siman-rojo);
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.registro-header h1 {
+  margin: 8px 0 12px;
+  color: var(--siman-azul);
+  font-size: clamp(30px, 5vw, 42px);
+  line-height: 1.1;
+}
+
+.registro-header p {
+  color: var(--gris-texto);
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+/* Tarjeta principal del formulario */
+
+.registro-card {
+  overflow: hidden;
+  border: 1px solid var(--gris-borde);
+  border-radius: 16px;
+  background-color: var(--blanco);
+  box-shadow: 0 15px 40px rgba(13, 34, 58, 0.12);
+}
+
+.registro-card-header {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  padding: 25px 30px;
+  background-color: var(--siman-azul);
+  color: var(--blanco);
+}
+
+.registro-icono {
+  width: 52px;
+  height: 52px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--siman-rojo);
+  border-radius: 50%;
+  font-size: 21px;
+}
+
+.registro-card-header h2 {
+  margin-bottom: 4px;
+  font-size: 21px;
+}
+
+.registro-card-header p {
+  color: #d6dce4;
+  font-size: 14px;
+}
+
+/* Campos del formulario */
+
+.registro-form {
+  padding: 35px;
+}
+
+.form-section {
+  padding-bottom: 30px;
+}
+
+.form-section + .form-section {
+  padding-top: 30px;
+  border-top: 1px solid var(--gris-borde);
+}
+
+.form-section h3 {
+  margin-bottom: 22px;
+  color: var(--siman-azul);
+  font-size: 18px;
+}
+
+.form-section h3 i {
+  margin-right: 8px;
+  color: var(--siman-rojo);
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 22px 25px;
+}
+
+.form-group {
+  min-width: 0;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 8px;
+  color: var(--siman-azul);
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.input-container {
+  position: relative;
+}
+
+.input-container i {
+  position: absolute;
+  top: 50%;
+  left: 15px;
+  z-index: 1;
+  color: #9aa4af;
+  font-size: 14px;
+  pointer-events: none;
+  transform: translateY(-50%);
+}
+
+.input-container input,
+.input-container select {
+  width: 100%;
+  height: 48px;
+  padding: 0 15px 0 43px;
+  border: 1px solid var(--gris-borde);
+  border-radius: 7px;
+  outline: none;
+  background-color: var(--blanco);
+  color: #333333;
+  font-size: 14px;
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.input-container input::placeholder {
+  color: #a5a5a5;
+}
+
+.input-container select {
+  cursor: pointer;
+}
+
+.input-container input:focus,
+.input-container select:focus {
+  border-color: var(--siman-rojo);
+  box-shadow: 0 0 0 3px rgba(230, 28, 56, 0.1);
+}
+
+.input-container input:valid:not(:placeholder-shown),
+.input-container select:valid {
+  border-color: #b8c5d1;
+}
+
+.form-group small {
+  display: block;
+  margin-top: 6px;
+  color: #888888;
+  font-size: 12px;
+}
+
+.form-full {
+  grid-column: 1 / -1;
+}
+
+/* Términos y botón */
+
+.form-footer {
+  padding-top: 25px;
+  border-top: 1px solid var(--gris-borde);
+}
+
+.terminos {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  margin-bottom: 25px;
+  color: var(--gris-texto);
+  font-size: 13px;
+  line-height: 1.5;
+  cursor: pointer;
+}
+
+.terminos input {
+  width: 17px;
+  height: 17px;
+  flex-shrink: 0;
+  margin-top: 1px;
+  accent-color: var(--siman-rojo);
+  cursor: pointer;
+}
+
+.registro-submit {
+  width: 100%;
+  min-height: 50px;
+  border: 0;
+  border-radius: 7px;
+  background-color: var(--siman-rojo);
+  color: var(--blanco);
+  font-size: 15px;
+  font-weight: 700;
+  cursor: pointer;
+  transition:
+    background-color 0.25s ease,
+    transform 0.25s ease;
+}
+
+.registro-submit i {
+  margin-left: 8px;
+}
+
+.registro-submit:hover {
+  background-color: var(--siman-azul);
+  transform: translateY(-2px);
+}
+
+.login-text {
+  margin-top: 20px;
+  color: var(--gris-texto);
+  font-size: 14px;
+  text-align: center;
+}
+
+.login-text a {
+  color: var(--siman-rojo);
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.login-text a:hover {
+  text-decoration: underline;
 }
 
 /* Footer */

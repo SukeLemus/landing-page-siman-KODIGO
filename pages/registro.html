@@ -1,0 +1,368 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Registro | Almacenes Siman El Salvador</title>
+
+    <link rel="stylesheet" href="../style/style.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+  </head>
+
+  <body>
+    <!-- Barra promocional -->
+    <header class="header-landing">
+      <aside class="top-bar">
+        <i class="fas fa-store icon-tienda"></i>
+
+        <p class="top-bar-text">
+          Encuentra tu sucursal en El Salvador: Galerías, Metrocentro, Plaza
+          Mundo, San Miguel y Santa Ana
+        </p>
+
+        <div class="top-bar-badge">¡SÚPER CONVIENE!</div>
+
+        <p class="top-bar-text">
+          Envío gratis por compras mayores a $50 en San Salvador.
+        </p>
+      </aside>
+    </header>
+
+    <!-- Navegación principal -->
+    <nav class="main-navbar">
+      <div class="navbar-container">
+        <a href="../Index.html" class="logo-link">
+          <div class="logo-badge">
+            SIMAN<span class="logo-country">.SV</span>
+          </div>
+        </a>
+
+        <ul class="nav-links">
+          <li>
+            <a href="../Index.html">Inicio</a>
+          </li>
+
+          <li>
+            <a href="../Index.html#productos">Productos Destacados</a>
+          </li>
+
+          <li class="alert">
+            <a href="../Index.html#modas-para-todos"> Moda para todos </a>
+          </li>
+
+          <li>
+            <a href="./estilo_referencia.html#footer">Contacto</a>
+          </li>
+        </ul>
+
+        <div class="navbar-right">
+          <a href="./registro.html" class="registro-btn"> Regístrate </a>
+        </div>
+      </div>
+    </nav>
+
+    <main>
+      <!-- Formulario de registro -->
+      <section class="registro">
+        <div class="registro-container">
+          <div class="registro-header">
+            <span>ÚNETE A SIMAN</span>
+
+            <h1>Crea tu cuenta</h1>
+
+            <p>
+              Regístrate y disfruta de una experiencia personalizada,
+              promociones exclusivas y muchas ventajas.
+            </p>
+          </div>
+
+          <div class="registro-card">
+            <div class="registro-card-header">
+              <div class="registro-icono">
+                <i class="fas fa-user-plus"></i>
+              </div>
+
+              <div>
+                <h2>Información personal</h2>
+
+                <p>Completa tus datos para crear tu cuenta.</p>
+              </div>
+            </div>
+
+            <form class="registro-form" action="#" method="post">
+              <!-- Datos personales -->
+              <div class="form-section">
+                <h3>
+                  <i class="fas fa-id-card"></i>
+                  Datos personales
+                </h3>
+
+                <div class="form-grid">
+                  <div class="form-group">
+                    <label for="nombres">Nombres</label>
+
+                    <div class="input-container">
+                      <i class="fas fa-user"></i>
+
+                      <input
+                        type="text"
+                        id="nombres"
+                        name="nombres"
+                        placeholder="Ingresa tus nombres"
+                        autocomplete="given-name"
+                        required
+                      />
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <label for="apellidos">Apellidos</label>
+
+                    <div class="input-container">
+                      <i class="fas fa-user"></i>
+
+                      <input
+                        type="text"
+                        id="apellidos"
+                        name="apellidos"
+                        placeholder="Ingresa tus apellidos"
+                        autocomplete="family-name"
+                        required
+                      />
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <label for="dui">Número de DUI</label>
+
+                    <div class="input-container">
+                      <i class="fas fa-address-card"></i>
+
+                      <input
+                        type="text"
+                        id="dui"
+                        name="dui"
+                        placeholder="00000000-0"
+                        maxlength="10"
+                        pattern="[0-9]{8}-[0-9]{1}"
+                        required
+                      />
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <label for="edad">Edad</label>
+
+                    <div class="input-container">
+                      <i class="fas fa-calendar"></i>
+
+                      <input
+                        type="number"
+                        id="edad"
+                        name="edad"
+                        placeholder="Ej. 30"
+                        min="18"
+                        max="100"
+                        required
+                      />
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <label for="genero">Género</label>
+
+                    <div class="input-container">
+                      <i class="fas fa-venus-mars"></i>
+
+                      <select id="genero" name="genero" required>
+                        <option value="" selected disabled>
+                          Selecciona una opción
+                        </option>
+
+                        <option value="femenino">Femenino</option>
+
+                        <option value="masculino">Masculino</option>
+
+                        <option value="otro">Otro</option>
+
+                        <option value="no-especificar">
+                          Prefiero no especificar
+                        </option>
+                      </select>
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <label for="telefono">Número de teléfono</label>
+
+                    <div class="input-container">
+                      <i class="fas fa-phone"></i>
+
+                      <input
+                        type="tel"
+                        id="telefono"
+                        name="telefono"
+                        placeholder="0000-0000"
+                        maxlength="9"
+                        pattern="[0-9]{4}-[0-9]{4}"
+                        autocomplete="tel"
+                        required
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Datos de contacto y acceso -->
+              <div class="form-section">
+                <h3>
+                  <i class="fas fa-lock"></i>
+                  Datos de acceso
+                </h3>
+
+                <div class="form-grid">
+                  <div class="form-group form-full">
+                    <label for="correo"> Correo electrónico </label>
+
+                    <div class="input-container">
+                      <i class="fas fa-envelope"></i>
+
+                      <input
+                        type="email"
+                        id="correo"
+                        name="correo"
+                        placeholder="ejemplo@correo.com"
+                        autocomplete="email"
+                        required
+                      />
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <label for="contrasena">Contraseña</label>
+
+                    <div class="input-container">
+                      <i class="fas fa-lock"></i>
+
+                      <input
+                        type="password"
+                        id="contrasena"
+                        name="contrasena"
+                        placeholder="Crea una contraseña"
+                        minlength="8"
+                        autocomplete="new-password"
+                        required
+                      />
+                    </div>
+
+                    <small> Mínimo 8 caracteres. </small>
+                  </div>
+
+                  <div class="form-group">
+                    <label for="confirmar-contrasena">
+                      Confirmar contraseña
+                    </label>
+
+                    <div class="input-container">
+                      <i class="fas fa-shield-alt"></i>
+
+                      <input
+                        type="password"
+                        id="confirmar-contrasena"
+                        name="confirmar-contrasena"
+                        placeholder="Repite tu contraseña"
+                        minlength="8"
+                        autocomplete="new-password"
+                        required
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Términos y envío -->
+              <div class="form-footer">
+                <label class="terminos">
+                  <input type="checkbox" name="terminos" required />
+
+                  <span>
+                    Acepto los términos y condiciones y autorizo el uso de mis
+                    datos para gestionar mi cuenta.
+                  </span>
+                </label>
+
+                <button type="submit" class="registro-submit">
+                  Crear mi cuenta
+                  <i class="fas fa-arrow-right"></i>
+                </button>
+
+                <p class="login-text">
+                  ¿Ya tienes una cuenta?
+                  <a href="#">Inicia sesión</a>
+                </p>
+              </div>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer" id="footer">
+      <div class="footer-content">
+        <div class="footer-image footer-left">
+          <img
+            src="https://res.cloudinary.com/pejob7cw/image/upload/v1791490405/logo-siman-Photoroom.png"
+            alt="Almacenes SIMAN"
+          />
+        </div>
+
+        <div class="footer-contact">
+          <div class="footer-logo">SIMAN<span>.SV</span></div>
+
+          <h3>Estamos para ayudarte</h3>
+
+          <p>
+            Realiza tus pedidos, consulta nuestros productos o recibe asesoría
+            de nuestro equipo.
+          </p>
+
+          <p class="footer-phone">
+            <i class="fas fa-phone"></i>
+            Call Center: <strong>2200-1234</strong>
+          </p>
+
+          <p class="footer-hours">
+            Atención todos los días de 8:00 a.m. a 8:00 p.m.
+          </p>
+        </div>
+
+        <div class="footer-payment">
+          <img
+            src="https://res.cloudinary.com/pejob7cw/image/upload/v1791490405/pagos-Photoroom.png"
+            alt="Pagos seguros"
+          />
+
+          <h3>Pagos seguros</h3>
+
+          <p>
+            Compra con confianza. Protegemos tus datos durante todo el proceso
+            de pago.
+          </p>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>
+          &copy; 2026 Almacenes Siman El Salvador. Proyecto con fines educativos
+          para el módulo Web Front End de KODIGO.
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>
