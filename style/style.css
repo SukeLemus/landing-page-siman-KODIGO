@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@600;700;800;900&display=swap");
+
 :root {
   --siman-azul: #0d223a;
   --siman-rojo: #e61c38;
@@ -5,17 +7,39 @@
   --gris-fondo: #f5f5f5;
   --gris-texto: #666666;
   --gris-borde: #e5e5e5;
+  --fuente-titulos: "Montserrat", sans-serif;
+  --fuente-cuerpo: "Inter", "Segoe UI", system-ui, -apple-system, sans-serif;
 }
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family:
-    "Segoe UI",
-    system-ui,
-    -apple-system,
-    sans-serif;
+  font-family: var(--fuente-cuerpo);
+}
+
+/* Fuente 1: Títulos, marcas, encabezados y precios destacados */
+h1,
+h2,
+h3,
+h4,
+.logo-badge,
+.top-bar-badge,
+.slide-info span,
+.slide-info h2,
+.productos-header span,
+.productos-header h2,
+.moda-header span,
+.moda-header h2,
+.moda-overlay span,
+.moda-overlay h3,
+.registro-header span,
+.registro-header h1,
+.producto-categoria,
+.producto-categoria-detalle,
+.producto-precio,
+.precio-actual {
+  font-family: var(--fuente-titulos);
 }
 
 html {
