@@ -36,17 +36,29 @@
     <!-- Navegación principal -->
     <nav class="main-navbar">
       <div class="navbar-container">
-        <a href="../Index.html" class="logo-link">
+        <a href="Index.html" class="logo-link">
           <div class="logo-badge">
             SIMAN<span class="logo-country">.SV</span>
           </div>
         </a>
 
-        <ul class="nav-links">
-          <li><a href="../Index.html">Inicio</a></li>
-          <li><a href="../Index.html#productos">Productos destacados</a></li>
+        <button
+          class="nav-toggle"
+          id="navToggle"
+          aria-label="Abrir menú de navegación"
+          aria-expanded="false"
+        >
+          <i class="fa-solid fa-bars"></i>
+        </button>
+
+        <ul class="nav-links" id="navLinks">
+          <li><a href="Index.html">Inicio</a></li>
+          <li><a href="#productos">Productos destacados</a></li>
           <li class="alert">
-            <a href="../Index.html#modas-para-todos"> Moda para todos </a>
+            <a href="#modas-para-todos"> Moda para todos </a>
+          </li>
+          <li class="nav-mobile-btn">
+            <a href="pages/registro.html" class="registro-btn">Regístrate</a>
           </li>
         </ul>
 
@@ -457,5 +469,6 @@
     </footer>
 
     <script src="scripts/slider.js"></script>
+    <script src="scripts/navbar.js"></script>
   </body>
 </html>

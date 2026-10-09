@@ -74,10 +74,15 @@ body {
 /* Navegación */
 
 .main-navbar {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
   width: 100%;
   padding: 12px 20px;
   background-color: var(--blanco);
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
 }
 
 .navbar-container {
@@ -87,6 +92,15 @@ body {
   align-items: center;
   justify-content: space-between;
   gap: 25px;
+  position: relative;
+}
+
+.nav-toggle {
+  display: none;
+}
+
+.nav-mobile-btn {
+  display: none;
 }
 
 .logo-link {
@@ -356,8 +370,8 @@ body {
   width: min(1250px, 100%);
   margin: auto;
   display: grid;
-  grid-template-columns: repeat(6, minmax(0, 1fr));
-  gap: 18px;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
 }
 
 .producto-card {
@@ -1313,3 +1327,310 @@ body {
   color: #aeb8c5;
   font-size: 12px;
 }
+
+/* ===================================================
+   DISEÑO RESPONSIVE Y MEDIA QUERIES
+   =================================================== */
+
+/* Pantallas medianas y tablets en horizontal (<= 1024px) */
+@media (max-width: 1024px) {
+  .moda-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-rows: auto;
+    gap: 16px;
+  }
+
+  .moda-mujer,
+  .moda-hombre,
+  .moda-accesorios,
+  .moda-relojes,
+  .moda-ninos,
+  .moda-fresco {
+    grid-column: auto;
+    grid-row: auto;
+    height: 280px;
+  }
+
+  .producto-detalle-grid {
+    gap: 30px;
+  }
+}
+
+/* Tablets en vertical e iPads (<= 900px) */
+@media (max-width: 900px) {
+  .productos-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+  }
+
+  .producto-detalle-grid {
+    grid-template-columns: 1fr;
+    padding: 25px 20px;
+    gap: 35px;
+  }
+
+  .footer-content {
+    grid-template-columns: 1fr;
+    gap: 35px;
+    text-align: center;
+    padding: 40px 0 30px;
+  }
+
+  .footer-left,
+  .footer-payment,
+  .footer-contact {
+    align-items: center;
+    text-align: center;
+  }
+}
+
+/* Teléfonos móviles y tablets pequeñas (<= 768px) */
+@media (max-width: 768px) {
+  /* Navbar móvil */
+  .main-navbar {
+    padding: 10px 16px;
+  }
+
+  .navbar-container {
+    gap: 12px;
+  }
+
+  .nav-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    background: transparent;
+    border: none;
+    color: var(--siman-azul);
+    font-size: 24px;
+    cursor: pointer;
+    border-radius: 8px;
+    transition:
+      color 0.2s ease,
+      background-color 0.2s ease;
+  }
+
+  .nav-toggle:hover,
+  .nav-toggle:focus-visible {
+    color: var(--siman-rojo);
+    background-color: rgba(13, 34, 58, 0.06);
+    outline: none;
+  }
+
+  .navbar-right {
+    display: none;
+  }
+
+  .nav-links {
+    display: none;
+    position: absolute;
+    top: calc(100% + 10px);
+    left: -16px;
+    right: -16px;
+    width: calc(100% + 32px);
+    background-color: var(--blanco);
+    flex-direction: column;
+    padding: 18px 20px 22px;
+    gap: 10px;
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.12);
+    border-top: 1px solid var(--gris-borde);
+    z-index: 999;
+  }
+
+  .nav-links.activo {
+    display: flex;
+    animation: navSlideDown 0.25s ease forwards;
+  }
+
+  .nav-links li {
+    width: 100%;
+    text-align: center;
+  }
+
+  .nav-links a {
+    display: block;
+    padding: 11px 16px;
+    font-size: 16px;
+    border-radius: 6px;
+  }
+
+  .nav-links a:hover {
+    background-color: var(--gris-fondo);
+  }
+
+  .nav-mobile-btn {
+    display: block;
+    width: 100%;
+    margin-top: 6px;
+    padding-top: 12px;
+    border-top: 1px solid var(--gris-borde);
+  }
+
+  .nav-mobile-btn .registro-btn {
+    display: block;
+    width: 100%;
+    text-align: center;
+    padding: 12px;
+    font-size: 15px;
+  }
+
+  /* Formulario de registro móvil */
+  .form-grid {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  .registro-form {
+    padding: 25px 20px;
+  }
+
+  .registro-card-header {
+    padding: 22px 20px;
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+@keyframes navSlideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Teléfonos móviles estándar y compactos (<= 580px) */
+@media (max-width: 580px) {
+  /* Barra promocional superior */
+  .top-bar {
+    flex-direction: column;
+    gap: 6px;
+    padding: 8px 12px;
+  }
+
+  .top-bar-text {
+    font-size: 12px;
+  }
+
+  .top-bar-badge {
+    font-size: 11px;
+    padding: 4px 10px;
+  }
+
+  /* Grid de productos en 1 columna centrada */
+  .productos-grid {
+    grid-template-columns: 1fr;
+    max-width: 380px;
+    margin: auto;
+    gap: 22px;
+  }
+
+  .producto-info h3 {
+    min-height: auto;
+  }
+
+  /* Moda en tarjetas verticales con altura balanceada */
+  .moda-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .moda-card {
+    height: 250px;
+  }
+
+  .moda-overlay {
+    right: 16px;
+    bottom: 16px;
+    left: 16px;
+  }
+
+  .moda-overlay h3 {
+    font-size: 20px;
+  }
+
+  /* Detalle de producto */
+  .detalle-producto {
+    padding: 20px 12px;
+  }
+
+  .producto-detalle-grid {
+    padding: 16px 12px;
+  }
+
+  .producto-precio-detalle {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  .precio-actual {
+    font-size: 32px;
+  }
+
+  .producto-miniaturas {
+    gap: 8px;
+  }
+
+  .producto-comprar {
+    min-height: 48px;
+    font-size: 15px;
+  }
+
+  .producto-envio {
+    padding: 12px;
+  }
+
+  /* Slider en móvil */
+  .slide-info {
+    left: 16px;
+    right: 16px;
+    max-width: none;
+  }
+
+  .slide-info h2 {
+    font-size: 24px;
+  }
+
+  .slide-info p {
+    font-size: 14px;
+    margin-bottom: 18px;
+  }
+
+  .slide-info a,
+  .slide-info2 a {
+    padding: 10px 20px;
+    font-size: 13px;
+  }
+
+  /* Registro en móvil */
+  .registro {
+    padding: 25px 12px;
+  }
+
+  .registro-form {
+    padding: 18px 12px;
+  }
+
+  .registro-card-header {
+    padding: 18px 14px;
+  }
+
+  .form-section {
+    padding-bottom: 20px;
+  }
+
+  .form-section + .form-section {
+    padding-top: 20px;
+  }
+
+  .terminos {
+    font-size: 12px;
+  }
+}
+
