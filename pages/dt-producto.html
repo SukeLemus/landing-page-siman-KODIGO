@@ -49,7 +49,6 @@
           <li>
             <a href="../Index.html#modas-para-todos">Moda para todos</a>
           </li>
-          <li><a href="#footer">Contacto</a></li>
         </ul>
 
         <div class="navbar-right">
@@ -66,9 +65,11 @@
           <nav class="producto-migas" aria-label="Ruta de navegación">
             <a href="../Index.html">Inicio</a>
             <i class="fas fa-chevron-right"></i>
-            <a href="../Index.html#productos">Tecnología</a>
+            <a href="../Index.html#productos" id="migas-categoria"
+              >Tecnología</a
+            >
             <i class="fas fa-chevron-right"></i>
-            <span>Smart TV 55 pulgadas</span>
+            <span id="migas-producto">Smart TV 55 pulgadas</span>
           </nav>
 
           <div class="producto-detalle-grid">
@@ -157,13 +158,15 @@
 
             <!-- Información del producto -->
             <section class="producto-informacion">
-              <span class="producto-categoria-detalle">
+              <span class="producto-categoria-detalle" id="producto-categoria">
                 TECNOLOGÍA / TELEVISORES
               </span>
 
-              <h1>Smart TV 55 pulgadas 4K UHD</h1>
+              <h1 id="producto-nombre">Smart TV 55 pulgadas 4K UHD</h1>
 
-              <p class="producto-modelo">Modelo de ejemplo: STV-55UHD</p>
+              <p class="producto-modelo" id="producto-modelo">
+                Modelo de ejemplo: STV-55UHD
+              </p>
 
               <div class="producto-calificacion">
                 <span class="estrellas" aria-label="5 de 5 estrellas">
@@ -177,14 +180,14 @@
               </div>
 
               <div class="producto-precio-detalle">
-                <span class="precio-actual">$599.99</span>
+                <span class="precio-actual" id="producto-precio">$599.99</span>
                 <span class="precio-disponibilidad">
                   <i class="fas fa-check-circle"></i>
                   Disponible
                 </span>
               </div>
 
-              <p class="producto-descripcion">
+              <p class="producto-descripcion" id="producto-descripcion">
                 Disfruta tus películas, series y videojuegos favoritos con una
                 imagen 4K Ultra HD, colores intensos y un diseño moderno que
                 combina con cualquier espacio de tu hogar.
@@ -193,7 +196,7 @@
               <div class="producto-caracteristicas">
                 <h2>Características principales</h2>
 
-                <ul>
+                <ul id="producto-caracteristicas">
                   <li>
                     <i class="fas fa-check"></i>
                     Pantalla LED de 55 pulgadas.
@@ -304,6 +307,7 @@
       <span>¡Compra realizada exitosamente! (Demostración)</span>
     </div>
 
+    <script src="../scripts/dt-producto.js"></script>
     <script src="../scripts/galeria.js"></script>
   </body>
 </html>
